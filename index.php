@@ -56,7 +56,7 @@ $_SESSION['nonce'] = sha1( KARMASTATS_NONCETOKEN.'<:>'.microtime().'<:>'.$_SERVE
         <p>
             This little web service analyzes your reddit history and breaks
             down your karma score into the subreddits that eventually make it
-            up. It then generates a nice, interactive pie chart for your pleasure.
+            up. It then generates nice, interactive pie charts for your pleasure.
         </p>
     </div>
 
