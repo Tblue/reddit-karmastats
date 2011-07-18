@@ -350,7 +350,7 @@ KarmaStats.prototype = {
     gatherData: function()
     {
         this.setStatus( 'Fetching datasets (got 0 so far)...' );
-        this.url = 'http://www.reddit.com/user/' + escape( this.username ) + '/.json?limit=' + this.limit;
+        this.url = 'http://www.reddit.com/user/' + escape( this.username ) + '/.json?sort=top&limit=' + this.limit;
 
         $.ajax( this.url, {
             dataType: 'jsonp',
