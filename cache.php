@@ -84,7 +84,7 @@ define( 'CACHEDIR_TTL', 60 * 60 * 24 ); // 1 day
 /**
  * Prefix to use for APC keys.
  */
-define( 'CACHE_APC_PREFIX', 'ajaxcache_key_' );
+define( 'CACHE_APC_PREFIX', 'ajaxcache_' );
 
 /**
  * PHP session name to use.
