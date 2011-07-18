@@ -1,0 +1,45 @@
+.message {
+    font-family: sans-serif;
+    font-size: small;
+}
+
+.error {
+    color: red;
+}
+
+.warning {
+    color: #D88F0B;
+}
+
+.errorfield {
+    background-color: #FFEBEB;
+    border: 1px solid red;
+}
+
+.center {
+    text-align: center;
+}
+
+#notes {
+    margin-bottom: 2em;
+}
+
+#notes > h2 {
+    font: medium serif;
+    margin: 0;
+    text-decoration: underline;
+}
+
+#interface {
+    display: none;
+}
+
+#result {
+    margin: 2em auto 0 auto;
+}
+
+#footer {
+    font-family: sans-serif;
+    font-size: small;
+    margin-top: 2em;
+}
