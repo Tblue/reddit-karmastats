@@ -391,6 +391,12 @@ KarmaStats.prototype = {
                 }
                 else if( sub.kind == 't3' )
                 {   // Submission
+                    if( sub.data.is_self )
+                    {   // Self posts do not count towards the total karma.
+                        //~ opera.postError( 'Ignoring: ' + sub.data.title );
+                        continue;
+                    }
+
                     basket = this.submissions;
                 }
                 else
