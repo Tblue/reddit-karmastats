@@ -112,6 +112,9 @@ $_SESSION['nonce'] = sha1( KARMASTATS_NONCETOKEN.'<:>'.microtime().'<:>'.$_SERVE
             Brought to you by <a href="http://www.reddit.com/user/Tblue">Tblue</a>.
             Hosted by <a href="http://www.ax86.net">ax86.net weblog</a>.
         </p>
+        <p>
+            <a href="https://code.launchpad.net/~tblue/+junk/reddit-karmastats">Grab the source code!</a>
+        </p>
     </div>
 </body>
 </html>
