@@ -299,8 +299,11 @@ KarmaStats.prototype = {
      */
     checkCache: function()
     {
-        this.setStatus( 'Checking cache...' );
+        // Clear error timeout handler; it may still be set if the data for the
+        // last user could not be fetched.
+        this.removeErrorTimeoutHandler();
 
+        this.setStatus( 'Checking cache...' );
         $.ajax( this.cache_url, {
             data: {
                 key: this.cache_prefix + this.username,
