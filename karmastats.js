@@ -594,7 +594,7 @@ KarmaStats.prototype = {
         $( '#status' ).hide();
         $( '#charts' ).show();
 
-        var myaddr = document.location.href.replace( /[?#].*?$/, '' );
+        var myaddr = document.location.href.replace( /#.*$/, '' );
         myaddr += '#' + escape( this.username );
         $( '#sharelink' ).html( 'Want to share these statistics? Point your friends to ' +
                                 '<a href="' + myaddr + '">' + myaddr + '</a>.' ).show();
