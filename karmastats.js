@@ -396,7 +396,6 @@ KarmaStats.prototype = {
                 {   // Submission
                     if( sub.data.is_self )
                     {   // Self posts do not count towards the total karma.
-                        //~ opera.postError( 'Ignoring: ' + sub.data.title );
                         continue;
                     }
 
@@ -410,6 +409,16 @@ KarmaStats.prototype = {
                 if( typeof( sub.data.score ) == 'undefined' )
                 {   // Calculate it.
                     sub.data.score = sub.data.ups - sub.data.downs;
+                }
+
+                if( ( sub.data.score == 0 && sub.data.ups == 0 ) ||
+                    ( sub.data.score == 1 && sub.data.ups == 1 ) ||
+                    ( sub.data.score == -1 && sub.data.downs == 1 ) )
+                {   // Submission has been upvoted/downvoted by its author, or the
+                    // author has removed his upvote/downvote. That doesn't count
+                    // towards the total karma.
+                    //~ opera.postError( 'Upvoted by user only: ' + ( sub.kind == 't1' ? sub.data.body : sub.data.title ) + ' (' + sub.data.ups + '/' + sub.data.downs + ')' );
+                    continue;
                 }
 
                 //~ opera.postError( 'Kind: ' + sub.kind );
