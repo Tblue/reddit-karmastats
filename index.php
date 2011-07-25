@@ -111,7 +111,7 @@ $_SESSION['nonce'] = sha1( KARMASTATS_NONCETOKEN.'<:>'.microtime().'<:>'.$_SERVE
         <p>
             <script type="text/javascript">
                 var reddit_title        = 'Make your reddit karma awesome by visualizing it!';
-                var reddit_url          = document.location.href.replace( /#.*$/, '' );
+                var reddit_url          = window.location.href.replace( /#.*$/, '' );
                 var reddit_target       = 'geek'; // XXX: Temporary? Most popular submission is currently in /r/geek.
             </script>
             <script type="text/javascript" src="http://www.reddit.com/static/button/button2.js"></script>

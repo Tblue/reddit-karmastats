@@ -49,9 +49,9 @@ var KarmaStats = function()
     $( '#karmaform' ).submit( $.proxy( this, 'analyzeUser' ) );
     $( '#username' ).focus();
 
-    if( document.location.hash !== '' )
+    if( window.location.hash !== '' )
     {
-        var username = document.location.hash.substr( 1 );
+        var username = window.location.hash.substr( 1 );
         $( '#username' ).val( username );
         $( '#karmaform' ).submit();
     }
@@ -283,7 +283,7 @@ KarmaStats.prototype = {
         }
 
         // Update the hash to make it possible to simply share the URL:
-        document.location.hash = '#' + escape( this.username );
+        window.location.hash = '#' + escape( this.username );
 
         // Whoo, let's start!
         this.checkCache();
@@ -594,7 +594,7 @@ KarmaStats.prototype = {
         $( '#status' ).hide();
         $( '#charts' ).show();
 
-        var myaddr = document.location.href.replace( /#.*$/, '' );
+        var myaddr = window.location.href.replace( /#.*$/, '' );
         myaddr += '#' + escape( this.username );
         $( '#sharelink' ).html( 'Want to share these statistics? Point your friends to ' +
                                 '<a href="' + myaddr + '">' + myaddr + '</a>.' ).show();
