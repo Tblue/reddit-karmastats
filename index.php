@@ -110,8 +110,10 @@ $_SESSION['nonce'] = sha1( KARMASTATS_NONCETOKEN.'<:>'.microtime().'<:>'.$_SERVE
     <div id="footer" class="center">
         <p>
             <script type="text/javascript">
-                var reddit_title = 'Make your reddit karma awesome by visualizing it!';
-                var reddit_url   = document.location.href.replace( /#.*$/, '' );
+                var reddit_title        = 'Make your reddit karma awesome by visualizing it!';
+                var reddit_url          = document.location.href.replace( /#.*$/, '' );
+                var reddit_newwindow    = '1';
+                var reddit_target       = 'geek'; // XXX: Temporary?
             </script>
             <script type="text/javascript" src="http://www.reddit.com/static/button/button2.js"></script>
         </p>
