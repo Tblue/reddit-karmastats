@@ -109,9 +109,16 @@ $_SESSION['nonce'] = sha1( KARMASTATS_NONCETOKEN.'<:>'.microtime().'<:>'.$_SERVE
 
     <div id="footer" class="center">
         <p>
+            <script type="text/javascript">
+                var reddit_title = 'Make your reddit karma awesome by visualizing it!';
+                var reddit_url   = document.location.href.replace( /#.*$/, '' );
+            </script>
+            <script type="text/javascript" src="http://www.reddit.com/static/button/button2.js"></script>
+        </p>
+        <p>
             Brought to you by <a href="http://www.reddit.com/user/Tblue">Tblue</a>.
             Hosted by <a href="http://www.ax86.net">ax86.net weblog</a>.
-            
+
             <br>
             <a href="https://code.launchpad.net/~tblue/+junk/reddit-karmastats">Grab the source code!</a>
         </p>
