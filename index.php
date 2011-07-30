@@ -1,8 +1,10 @@
 <?php
 /**
  * Secret token to use when creating nonces.
+ *
+ * Should be a longer string consisting of random characters. Like a passphrase.
  */
-define( 'KARMASTATS_NONCETOKEN', '3fLfFL11aogeGgcglHemMn22Z2G4KfW4lpL3aPoHijg6Ufy2UpfsXhpzfZiY6gDR' );
+define( 'KARMASTATS_NONCETOKEN', 'fill-me-in' );
 
 /**
  * PHP session name to use.
